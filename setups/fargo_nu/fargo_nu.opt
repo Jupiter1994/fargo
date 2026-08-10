@@ -26,12 +26,13 @@ FARGO_OPT += -DCYLINDRICAL
 
 # Physics
 FARGO_OPT += -DISOTHERMAL
-FARGO_OPT += -DPOTENTIAL
-FARGO_OPT += -DALPHAVISCOSITY
+FARGO_OPT += -DPOTENTIAL # activates gravity
+FARGO_OPT += -DVISCOSITY # activates constant kinematic viscosity (NU)
+# FARGO_OPT += -DALPHAVISCOSITY # activates Shakura-Sunyaev viscosity
 
 # Buffer zones
-FARGO_OPT += -DSTOCKHOLM
-FARGO_OPT += -DRAM
+FARGO_OPT += -DSTOCKHOLM # activates wave-killing in Y and Z
+# FARGO_OPT += -DRAM # enables a faster advection algorithm
 
 # Cuda blocks
 ifeq (${GPU}, 1)
