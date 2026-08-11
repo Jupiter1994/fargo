@@ -17,3 +17,5 @@ std/.lastflags.old
 *.bak
 *tests.log
 mp.pro
+
+setups/fargo_nu/orig_*
